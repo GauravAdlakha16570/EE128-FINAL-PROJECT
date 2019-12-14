@@ -3,6 +3,7 @@
 static int i = 0;
 static int j = 0;
 static int p = 0;
+static int k = 0;
 int upflag = 1;
 int uparr[10];
 int downarr[10];
@@ -29,10 +30,10 @@ return;
 
 void upmove() {
 if (uplace != 0) {
-for(i = 0; i < uplace; ++i) {
-newfloor = uparr[i] - currfloor;
+for(k = 0; k < uplace; ++k) {
+newfloor = uparr[k] - currfloor;
 //currfloor = uparr[i];
-   uparr[i] = 0;
+   uparr[k] = 0;
 newfloor *= 55;
 
 for (j = 1; j <= newfloor; ++j) {
@@ -69,10 +70,10 @@ uplace = 0;
 
 void downmove() {
 if(dplace != 0) {
-for(i = 0; i < dplace; ++i) {
-newfloor = currfloor - downarr[i];
-//currfloor = downarr[i];
-downarr[i] = 0;
+for(k = 0; k < dplace; ++k) {
+newfloor = currfloor - downarr[k];
+//currfloor = downarr[k];
+downarr[k] = 0;
 newfloor *= 55;
 
 for (j = 1; j <= newfloor; ++j) {
